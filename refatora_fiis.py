@@ -33,8 +33,6 @@ for fiis in fundos:
         if rows[0].value == urls_fiis[-6:]:  # Nome do Fundo
             rows[1].value = v_vp  # Valor sobre valor patrimonial
             rows[2].value = dy  # Porcentagem do dividendo anual
-            print('SALVOU? '+rows[0].value)
-        
 
     nome_do_arquivo.save('Investimento.xlsx')
 print('Finalizado...')
