@@ -30,7 +30,7 @@ for fiis in fundos:
 
     for rows in dados.iter_rows(min_row=2, max_row=15):
         
-        if rows[0].value == urls_fiis[-6:]:  # Nome do Fundo
+        if rows[0].value == urls_fiis[-6:]:  # # Nome do Fundo (tem que estar igual [planilha-investimentos] e lista "fundos")
             rows[1].value = v_vp  # Valor sobre valor patrimonial
             rows[2].value = dy  # Porcentagem do dividendo anual
 
