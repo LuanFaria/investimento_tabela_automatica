@@ -3,3 +3,13 @@ Atualização automatizada de informações diretamente do site "statusinvest.co
 
 geckodriver - Firefox
 chromedriver - Google Chrome
+
+
+#### Create env:
+~~~
+python -m venv path/to/your/virtualenv/env
+~~~
+
+#### After activate env execute:
+~~~
+python.exe -m pip install --upgrade pip
