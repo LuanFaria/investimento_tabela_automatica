@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import openpyxl
 
-fundos=['btra11', 'rbff11', 'bcff11', 'hsml11', 'visc11', 'bbpo11', 'vino11', 'vghf11', 'mxrf11', 'kncr11', 'bcri11','hglg11','ggrc11', 'mcci11']
+fundos=['rbff11', 'bcff11', 'hsml11', 'visc11', 'bbpo11', 'knri11','vino11', 'rztr11','vghf11', 'mxrf11', 'kncr11', 'bcri11','hglg11','ggrc11', 'mcci11']
 
 url = 'https://statusinvest.com.br/fundos-imobiliarios/'
 nome_do_arquivo = openpyxl.load_workbook('Investimento.xlsx')
@@ -30,9 +30,9 @@ for fiis in fundos:
 
     for rows in dados.iter_rows(min_row=2, max_row=15):
         
-        if rows[0].value == urls_fiis[-6:]:  # # Nome do Fundo (tem que estar igual [planilha-investimentos] e lista "fundos")
+        if rows[0].value == urls_fiis[-6:]:  # Nome do Fundo
             rows[1].value = v_vp  # Valor sobre valor patrimonial
             rows[2].value = dy  # Porcentagem do dividendo anual
-
+        
     nome_do_arquivo.save('Investimento.xlsx')
 print('Finalizado...')
